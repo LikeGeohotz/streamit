@@ -15,34 +15,36 @@ bar = st.progress(0)
 for i in range(100):
     latest_iteration.text(f'Iteration {i+1}')
     bar.progress(i + 1)
-    time.sleep(0.01)
+    time.sleep(0.1)
 
-"Done"
+# "Done"
 
-left_column, right_column = st.beta_columns(2)
-button = left_column.button("右カラムに表示")
+# left_column, right_column = st.beta_columns(2)
+# button = left_column.button("右カラムに表示")
 
-if button:
-    right_column.write("これは右カラム")
+# if button:
+#     right_column.write("これは右カラム")
 
-expander1 = st.beta_expander("問い合わせ1")
-expander1.write("問い合わせ1の回答")
-expander2 = st.beta_expander("問い合わせ2")
-expander2.write("問い合わせ2の回答")
+# expander1 = st.beta_expander("問い合わせ1")
+# expander1.write("問い合わせ1の回答")
+# expander2 = st.beta_expander("問い合わせ2")
+# expander2.write("問い合わせ2の回答")
 
 
-text = st.text_input("Which color dou you like?")
-"あなたの好きな色は: ", text
+# text = st.text_input("Which color dou you like?")
+# "あなたの好きな色は: ", text
 
-number = st.selectbox(
-    "Which number do you like?",
-    list(range(1, 11))
-)
-"あなたの好きな数字は ", number, " です"
+# number = st.selectbox(
+#     "Which number do you like?",
+#     list(range(1, 11))
+# )
+# "あなたの好きな数字は ", number, " です"
 
+"This is Slider"
 condition = st.slider("あなたの今の調子は？", 0, 100, 70)
 "Condition: ", condition
 
+"You can display the image"
 
 if st.checkbox('Show Image'):
     img = Image.open('test.jpg')
